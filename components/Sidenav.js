@@ -32,13 +32,13 @@ function Sidenav() {
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
-            enterFrom="-translate-x-full"
+            enterFrom="translate-x-full"
             enterTo="translate-x-0"
             leave="ease-in duration-200"
             leaveFrom="translate-x-0"
-            leaveTo="-translate-x-full"
+            leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed inset-0 h-full w-full bg-white">
+            <Dialog.Panel className="fixed inset-y-0 right-0 h-full w-[80%] bg-white">
               <Dialog.Title
                 as="h3"
                 className="text-lg font-medium leading-6 text-gray-900"
