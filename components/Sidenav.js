@@ -39,27 +39,35 @@ function Sidenav() {
             leaveTo="translate-x-full"
           >
             <Dialog.Panel className="fixed inset-y-0 right-0 h-full w-[80%] bg-white">
-              <Dialog.Title
-                as="h3"
-                className="text-lg font-medium leading-6 text-gray-900"
-              >
-                Payment successful
-              </Dialog.Title>
-              <div className="mt-2">
-                <p className="text-sm text-gray-500">
-                  Your payment has been successfully submitted. We’ve sent you
-                  an email with all of the details of your order.
-                </p>
-              </div>
-
-              <div className="mt-4">
-                <button
-                  type="button"
-                  className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                  onClick={closeModal}
-                >
-                  Got it, thanks!
-                </button>
+              <div className="p-5">
+                <div className="flex items-center text-left">
+                  <div className="h-12 w-12 bg-green-50 font-medium tracking-wider text-green-600 font-poppins text-sm rounded-full flex items-center justify-center">
+                    PB
+                  </div>
+                  <div className="ml-4">
+                    <h1 className="font-medium text-sm font-poppins text-zinc-800">
+                      Peter B.
+                    </h1>
+                    <h2 className="font-medium text-xs font-poppins text-zinc-400">
+                      Your Organizations
+                    </h2>
+                  </div>
+                </div>
+                <ul className="mt-5 text-xs text-zinc-600 space-y-5 font-poppins">
+                  <li>Account</li>
+                  <li>Your organizations</li>
+                  <li>Logout</li>
+                </ul>
+                <div className="mt-7">
+                  <ul className="text-xs text-zinc-600 space-y-5 font-poppins">
+                    <li className="bg-green-600 cursor-pointer w-full text-center text-white py-3 rounded">
+                      Create a new organization
+                    </li>
+                    <li className="cursor-pointer w-full text-center text-zinc-700 rounded">
+                      Join an existing organization
+                    </li>
+                  </ul>
+                </div>
               </div>
             </Dialog.Panel>
           </Transition.Child>

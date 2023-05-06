@@ -2,7 +2,6 @@
 import React, { useContext } from "react";
 import Sidebar from "./Sidenav";
 import GlobalStateContext from "@/context/GlobalState";
-import AccountPopover from "./AccountPopover";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 
@@ -67,10 +66,10 @@ function Navbar() {
             >
               <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-full -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                  <div className="relative bg-white">
+                  <div className="bg-white">
                     <ul className="p-4 text-xs text-zinc-600 space-y-4 font-poppins">
                       <li>Account</li>
-                      <li>Your rganizations</li>
+                      <li>Your organizations</li>
                       <li>Logout</li>
                     </ul>
                     <div className="bg-zinc-50 border-t">
