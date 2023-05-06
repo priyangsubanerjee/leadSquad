@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import GlobalStateContext from "@/context/GlobalState";
+import { Popover, Transition } from "@headlessui/react";
 import React, { useContext } from "react";
 import Sidebar from "./Sidenav";
-import GlobalStateContext from "@/context/GlobalState";
 import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
 
 function Navbar() {
   const { setSidenavOpen, sidenavOpen } = useContext(GlobalStateContext);

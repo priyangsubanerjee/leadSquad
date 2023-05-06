@@ -81,7 +81,7 @@ function Sidenav() {
                 </ul>
                 <div className="mt-10">
                   <ul className="text-xs text-slate-600 space-y-2 font-poppins">
-                    <li className="bg-green-600 cursor-pointer w-full text-center text-white py-4 rounded">
+                    <li className="bg-green-600 cursor-pointer w-full text-center text-white py-4 rounded-md">
                       Create a new organization
                     </li>
                     <li className="py-4 cursor-pointer w-full text-center text-slate-700 rounded">
