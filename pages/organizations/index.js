@@ -15,7 +15,7 @@ function Default() {
           <p className="text-xs mt-4 text-slate-500">200 members</p>
           <div className="flex items-center space-x-5 mt-10 text-zinc-600">
             <button className="text-xs text-zinc-700 py-3 px-5 bg-white rounded-full border border-slate-200">
-              <span>Copy organization id</span>
+              <span>Assign task</span>
             </button>
           </div>
         </div>
