@@ -12,14 +12,14 @@ function Navbar() {
       <img src="/logo.png" className="h-8 lg:h-10" alt="" />
       <div className="ml-4">
         <h1 className="font-medium lg:block text-lg font-poppins text-green-600">
-          lead<span className="text-zinc-800">Squad</span>
+          lead<span className="text-slate-800">Squad</span>
         </h1>
       </div>
-      <div className="ml-6 text-xs text-zinc-400 space-x-4 hidden lg:flex items-center font-poppins">
+      <div className="ml-6 font-medium text-xs text-slate-400 space-x-3 hidden lg:flex items-center font-poppins">
         <span>/</span>
         <span>Organizations</span>
         <span>/</span>
-        <span className="text-black">Dtory</span>
+        <span className="text-slate-700">Dtory</span>
       </div>
       <div className="ml-auto h-full flex items-center">
         <Popover className="relative w-fit h-full">
@@ -30,10 +30,10 @@ function Navbar() {
                   PB
                 </div>
                 <div className="ml-4">
-                  <h1 className="font-medium text-sm font-poppins text-zinc-800">
+                  <h1 className="font-medium text-sm font-poppins text-slate-800">
                     Peter B.
                   </h1>
-                  <h2 className="font-medium text-xs font-poppins text-zinc-400">
+                  <h2 className="font-medium text-xs font-poppins text-slate-400">
                     Your Organizations
                   </h2>
                 </div>
@@ -67,17 +67,17 @@ function Navbar() {
               <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-full -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="bg-white">
-                    <ul className="p-4 text-xs text-zinc-600 space-y-4 font-poppins">
+                    <ul className="p-4 text-xs text-slate-600 space-y-4 font-poppins">
                       <li>Account</li>
                       <li>Your organizations</li>
                       <li>Logout</li>
                     </ul>
-                    <div className="bg-zinc-50 border-t">
-                      <ul className="p-4 text-xs text-zinc-600 space-y-5 font-poppins">
+                    <div className="bg-slate-50 border-t">
+                      <ul className="p-4 text-xs text-slate-600 space-y-5 font-poppins">
                         <li className="bg-green-600 cursor-pointer w-full text-center text-white py-3 rounded">
                           Create a new organization
                         </li>
-                        <li className="cursor-pointer w-full text-center text-zinc-700 rounded">
+                        <li className="cursor-pointer w-full text-center text-slate-700 rounded">
                           Join an existing organization
                         </li>
                       </ul>

@@ -45,10 +45,10 @@ function Sidenav() {
                     PB
                   </div>
                   <div className="ml-4">
-                    <h1 className="font-medium text-sm font-poppins text-zinc-800">
+                    <h1 className="font-medium text-sm font-poppins text-slate-800">
                       Peter B.
                     </h1>
-                    <h2 className="font-medium text-xs font-poppins text-zinc-400">
+                    <h2 className="font-medium text-xs font-poppins text-slate-400">
                       Your Organizations
                     </h2>
                   </div>
@@ -64,7 +64,7 @@ function Sidenav() {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-6 h-6 text-zinc-700"
+                      class="w-6 h-6 text-slate-700"
                     >
                       <path
                         stroke-linecap="round"
@@ -74,17 +74,17 @@ function Sidenav() {
                     </svg>
                   </button>
                 </div>
-                <ul className="mt-7 font-medium text-xs text-zinc-600 space-y-5 font-poppins">
+                <ul className="mt-7 font-medium text-xs text-slate-600 space-y-5 font-poppins">
                   <li>Account</li>
                   <li>Your organizations</li>
                   <li className="text-red-500">Logout</li>
                 </ul>
                 <div className="mt-10">
-                  <ul className="text-xs text-zinc-600 space-y-2 font-poppins">
+                  <ul className="text-xs text-slate-600 space-y-2 font-poppins">
                     <li className="bg-green-600 cursor-pointer w-full text-center text-white py-4 rounded">
                       Create a new organization
                     </li>
-                    <li className="py-4 cursor-pointer w-full text-center text-zinc-700 rounded">
+                    <li className="py-4 cursor-pointer w-full text-center text-slate-700 rounded">
                       Join an existing organization
                     </li>
                   </ul>
