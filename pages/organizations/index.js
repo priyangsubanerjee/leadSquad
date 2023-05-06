@@ -4,7 +4,6 @@ import React from "react";
 function Default() {
   return (
     <div>
-      <Navbar />
       <div className="px-5 mt-5 font-medium text-xs text-zinc-400 space-x-3 flex lg:hidden items-center font-poppins">
         <span>/</span>
         <span>Organizations</span>

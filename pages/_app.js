@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import GlobalStateContext from "@/context/GlobalState";
 import "@/styles/globals.css";
 import { useState } from "react";
@@ -12,7 +13,9 @@ export default function App({ Component, pageProps }) {
         sidenavOpen,
       }}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </GlobalStateContext.Provider>
   );
 }
