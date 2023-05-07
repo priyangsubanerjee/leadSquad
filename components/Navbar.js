@@ -39,11 +39,16 @@ function Navbar() {
                 <Popover.Button className="outline-none h-full">
                   <div className="h-full border-l px-4 hidden lg:flex items-center text-left">
                     <div className="h-12 w-12 bg-green-50 font-medium tracking-wider text-green-600 font-poppins text-sm rounded-full flex items-center justify-center">
-                      PB
+                      {session?.user?.name
+                        ?.split(" ")[0][0]
+                        .toLocaleUpperCase() +
+                        session?.user?.name
+                          ?.split(" ")[1][0]
+                          .toLocaleUpperCase()}
                     </div>
                     <div className="ml-4">
                       <h1 className="font-medium text-sm font-poppins text-slate-800">
-                        Peter B.
+                        {session?.user?.name}
                       </h1>
                       <h2 className="font-medium text-xs font-poppins text-slate-400">
                         Your Organizations
