@@ -77,7 +77,10 @@ export default function Home() {
             <div className="w-28 h-[1px] bg-slate-300"></div>
           </div>
           <div className="grid grid-cols-2 font-poppins w-full mt-10 gap-4">
-            <button className="border px-2 py-3 flex items-center justify-center rounded">
+            <button
+              onClick={() => signIn("google")}
+              className="border px-2 py-3 flex items-center justify-center rounded"
+            >
               <img
                 className="h-5"
                 src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"

@@ -16,7 +16,7 @@ function Sidenav() {
   return (
     <>
       <Transition appear show={sidenavOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-30" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -38,7 +38,7 @@ function Sidenav() {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed inset-y-0 right-0 h-full w-[80%] bg-white">
+            <Dialog.Panel className="fixed z-30 inset-y-0 right-0 h-full w-[80%] bg-white">
               <div className="p-5">
                 <div className="flex items-center text-left">
                   <div className="h-12 w-12 bg-green-50 font-medium tracking-wider text-green-600 font-poppins text-sm rounded-full flex items-center justify-center">

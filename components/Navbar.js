@@ -131,8 +131,6 @@ function Navbar() {
             </button>
           </div>
         )}
-
-        <Sidebar />
       </div>
     </div>
   );
