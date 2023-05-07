@@ -9,17 +9,15 @@ import { signIn, signOut, useSession } from "next-auth/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { data: session } = useSession();
-  if (session) {
-    return (
-      <>
-        Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    );
+  const session = useSession();
+  if (session.status == "loading") {
+    return <div></div>;
+  }
+  if (session.status == "authenticated") {
+    return <>signed in</>;
   }
   return (
-    <div className="bg-white pt-16 h-screen w-screen fixed inset-0 overflow-auto">
+    <div className="h-full">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="h-full bg-white hidden lg:block border-r p-20">
           <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>

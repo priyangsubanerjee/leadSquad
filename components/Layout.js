@@ -4,7 +4,7 @@ import Sidenav from "./Sidenav";
 
 function Layout({ children }) {
   return (
-    <div>
+    <div className="bg-white pt-16 h-screen w-screen fixed inset-0 overflow-auto">
       <Navbar />
       <Sidenav />
       {children}

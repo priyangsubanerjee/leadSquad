@@ -50,7 +50,7 @@ function Navbar() {
                       <h1 className="font-medium text-sm font-poppins text-slate-800">
                         {session?.user?.name}
                       </h1>
-                      <h2 className="font-medium text-xs font-poppins text-slate-400">
+                      <h2 className="font-medium text-xs font-poppins text-slate-400 mt-1">
                         Your Organizations
                       </h2>
                     </div>
@@ -87,13 +87,14 @@ function Navbar() {
                         <ul className="p-4 text-xs text-slate-600 space-y-4 font-poppins font-medium">
                           <li>Account</li>
                           <li>Your organizations</li>
-                          <li
-                            onClick={() => {
-                              signOut();
-                            }}
-                            className="text-red-400"
-                          >
-                            Logout
+                          <li className="text-red-400">
+                            <button
+                              onClick={() => {
+                                signOut();
+                              }}
+                            >
+                              Logout
+                            </button>
                           </li>
                         </ul>
                         <div className="bg-slate-50 border-t">
