@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import GlobalStateContext from "@/context/GlobalState";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 function Sidenav() {
   const { setSidenavOpen, sidenavOpen } = useContext(GlobalStateContext);
@@ -79,7 +79,9 @@ function Sidenav() {
                 <ul className="mt-7 font-medium text-xs text-slate-600 space-y-5 font-poppins">
                   <li>Account</li>
                   <li>Your organizations</li>
-                  <li className="text-red-500">Logout</li>
+                  <li className="text-red-500">
+                    <button onClick={() => signOut()}>Logout</button>
+                  </li>
                 </ul>
                 <div className="mt-10">
                   <ul className="text-xs text-slate-600 space-y-2 font-poppins">
