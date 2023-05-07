@@ -19,7 +19,7 @@ export default function Home() {
     );
   }
   return (
-    <div className="bg-white pt-16 h-screen">
+    <div className="bg-white pt-16 h-screen w-screen fixed inset-0 overflow-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
         <div className="h-full bg-white hidden lg:block border-r p-20">
           <h1 className="text-3xl font-bold">Lorem ipsum dolor sit.</h1>
@@ -30,7 +30,7 @@ export default function Home() {
             libero explicabo harum? Fuga, rerum.
           </p>
         </div>
-        <div className="w-full max-w-lg lg:mx-auto lg:rounded-lg h-fit bg-white lg:my-auto py-10 px-6">
+        <div className="w-full max-w-lg lg:mx-auto lg:rounded-lg h-fit bg-white lg:my-auto py-16 px-6">
           <h1 className="font-medium lg:font-semibold lg:text-2xl font-poppins text-slate-800 flex items-center justify-center">
             Welcome to
             <span className="ml-2 font-medium lg:block font-poppins text-green-600">
