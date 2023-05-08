@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import GlobalStateContext from "@/context/GlobalState";
 import { Popover, Transition } from "@headlessui/react";
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Sidebar from "./Sidenav";
 import { Fragment } from "react";
 import { signOut, useSession } from "next-auth/react";
@@ -9,6 +9,15 @@ import { signOut, useSession } from "next-auth/react";
 function Navbar() {
   const { setSidenavOpen, sidenavOpen } = useContext(GlobalStateContext);
   const { data: session } = useSession();
+  const [params, setParams] = useState([]);
+
+  useEffect(() => {
+    const url = window.location.pathname;
+    const paramsArray = url.split("/");
+    paramsArray.shift();
+    setParams(paramsArray);
+  }, []);
+
   return (
     <div className="h-16 border-b flex items-center px-6 lg:px-20 fixed top-0 inset-x-0 z-20 bg-white">
       <img src="/logo.png" className="h-8 lg:h-10" alt="" />
@@ -19,9 +28,20 @@ function Navbar() {
       </div>
       {session ? (
         <div className="ml-6 font-medium text-xs text-slate-400 space-x-3 hidden lg:flex items-center font-poppins">
-          <span>/</span>
-          <span className="text-slate-700">Organizations</span>
-          <span>/</span>
+          {params.map((param, i) => {
+            return (
+              <div key={i}>
+                <span className="mr-3">/</span>
+                <span
+                  className={`className="text-zinc-600 ${
+                    i == params.length - 1 && "text-slate-700"
+                  }`}
+                >
+                  {param[0].toUpperCase() + param.slice(1)}
+                </span>
+              </div>
+            );
+          })}
         </div>
       ) : (
         <ul className="hidden lg:flex items-center text-sm font-poppins text-slate-700 ml-10 space-x-7">

@@ -24,11 +24,6 @@ export async function getServerSideProps(context) {
 function Default() {
   return (
     <div>
-      <div className="px-5 mt-5 font-medium text-xs text-zinc-400 space-x-3 flex lg:hidden items-center font-poppins">
-        <span>/</span>
-        <span>Organizations</span>
-        <span>/</span>
-      </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 p-5 lg:px-28 mt-5">
         <div className="w-full bg-slate-50 border border-slate-200 rounded-xl p-5 font-poppins">
           <h1 className="text-slate-700 font-semibold">Organization name</h1>
