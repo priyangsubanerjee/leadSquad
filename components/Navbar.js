@@ -20,9 +20,8 @@ function Navbar() {
       {session ? (
         <div className="ml-6 font-medium text-xs text-slate-400 space-x-3 hidden lg:flex items-center font-poppins">
           <span>/</span>
-          <span>Organizations</span>
+          <span className="text-slate-700">Organizations</span>
           <span>/</span>
-          <span className="text-slate-700">Dtory</span>
         </div>
       ) : (
         <ul className="hidden lg:flex items-center text-sm font-poppins text-slate-700 ml-10 space-x-7">
@@ -99,7 +98,7 @@ function Navbar() {
                         </ul>
                         <div className="bg-slate-50 border-t">
                           <ul className="p-4 text-xs text-slate-600 space-y-5 font-poppins">
-                            <li className="bg-green-600 cursor-pointer w-full text-center text-white py-3 rounded">
+                            <li className="bg-green-600 hover:bg-green-700 cursor-pointer w-full text-center text-white py-3 rounded transition-all">
                               Create a new organization
                             </li>
                             <li className="cursor-pointer w-full text-center text-slate-700 rounded">

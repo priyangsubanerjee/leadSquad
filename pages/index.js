@@ -5,6 +5,27 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useEffect } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "pages/api/auth/[...nextauth]";
+
+export async function getServerSideProps(context) {
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  if (session) {
+    return {
+      redirect: {
+        destination: "/organizations",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+      session,
+    },
+  };
+}
 
 const inter = Inter({ subsets: ["latin"] });
 
