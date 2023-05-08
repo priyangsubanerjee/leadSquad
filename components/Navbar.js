@@ -83,9 +83,13 @@ function Navbar() {
                   <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-full -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
                     <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="bg-white">
-                        <ul className="p-4 text-xs text-slate-600 space-y-4 font-poppins font-medium">
-                          <li>Account</li>
-                          <li>Your organizations</li>
+                        <ul className="p-4 text-xs text-slate-500 space-y-4 font-poppins font-medium transition-all">
+                          <li className="hover:text-slate-800 cursor-pointer">
+                            Account
+                          </li>
+                          <li className="hover:text-slate-700 cursor-pointer">
+                            Your organizations
+                          </li>
                           <li className="text-red-400">
                             <button
                               onClick={() => {

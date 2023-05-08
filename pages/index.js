@@ -52,17 +52,8 @@ export default function Home() {
               repudiandae libero explicabo harum? Fuga, rerum.
             </p>
           </div>
-          <div className="w-full max-w-lg lg:mx-auto lg:rounded-lg h-fit bg-white lg:my-auto py-8 px-6">
-            <h1 className="font-medium hidden lg:flex lg:font-semibold lg:text-2xl font-poppins text-slate-800 items-center justify-center">
-              Welcome to
-              <span className="ml-2 font-medium lg:block font-poppins text-green-600">
-                lead<span className="text-slate-800">Squad</span>
-              </span>
-            </h1>
-            <p className="text-center hidden lg:block text-zinc-500 text-xs font-poppins mt-4 font-medium">
-              Login to your account
-            </p>
-            <div className="lg:mt-8">
+          <div className="w-full max-w-lg lg:mx-auto lg:rounded-lg h-fit bg-white lg:my-auto py-8 lg:py-0 px-6">
+            <div>
               <label
                 htmlFor=""
                 className="block text-sm font-poppins text-slate-500 font-medium"
@@ -72,7 +63,7 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="abc@gmail.com"
-                className="border-b w-full py-3 mt-1 rounded-none"
+                className="border-b w-full py-3 mt-1 rounded-none outline-none"
               />
             </div>
             <div className="mt-6">
@@ -85,7 +76,7 @@ export default function Home() {
               <input
                 type="text"
                 placeholder="*********"
-                className="border-b w-full py-3 mt-1 rounded-none"
+                className="border-b w-full py-3 mt-1 rounded-none outline-none"
               />
             </div>
             <div className="mt-10">
@@ -95,13 +86,15 @@ export default function Home() {
             </div>
             <div className="mt-16 flex items-center justify-center text-slate-700 space-x-5 font-poppins">
               <div className="w-28 h-[1px] bg-slate-300"></div>
-              <span className="text-xs font-medium">Login with</span>
+              <span className="text-xs font-medium text-slate-500">
+                or login with
+              </span>
               <div className="w-28 h-[1px] bg-slate-300"></div>
             </div>
             <div className="grid grid-cols-2 font-poppins w-full mt-10 gap-4">
               <button
                 onClick={() => signIn("google")}
-                className="border px-2 py-3 flex items-center justify-center rounded"
+                className="border px-2 py-3 flex items-center justify-center rounded hover:bg-slate-50"
               >
                 <img
                   className="h-5"
@@ -110,7 +103,7 @@ export default function Home() {
                 />
                 <span className="text-sm font-medium ml-3">Google</span>
               </button>
-              <button className="border px-2 py-3 flex items-center justify-center rounded">
+              <button className="border px-2 py-3 flex items-center justify-center rounded hover:bg-slate-50">
                 <img
                   className="h-5"
                   src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
