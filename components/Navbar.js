@@ -96,7 +96,7 @@ function Navbar() {
                             </button>
                           </li>
                         </ul>
-                        <div className="bg-slate-50 border-t">
+                        <div className="bg-slate-50 border-t font-medium">
                           <ul className="p-4 text-xs text-slate-600 space-y-5 font-poppins">
                             <li className="bg-green-600 hover:bg-green-700 cursor-pointer w-full text-center text-white py-3 rounded transition-all">
                               Create a new organization

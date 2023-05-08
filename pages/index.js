@@ -52,17 +52,17 @@ export default function Home() {
               repudiandae libero explicabo harum? Fuga, rerum.
             </p>
           </div>
-          <div className="w-full max-w-lg lg:mx-auto lg:rounded-lg h-fit bg-white lg:my-auto py-16 px-6">
-            <h1 className="font-medium lg:font-semibold lg:text-2xl font-poppins text-slate-800 flex items-center justify-center">
+          <div className="w-full max-w-lg lg:mx-auto lg:rounded-lg h-fit bg-white lg:my-auto py-8 px-6">
+            <h1 className="font-medium hidden lg:flex lg:font-semibold lg:text-2xl font-poppins text-slate-800 items-center justify-center">
               Welcome to
               <span className="ml-2 font-medium lg:block font-poppins text-green-600">
                 lead<span className="text-slate-800">Squad</span>
               </span>
             </h1>
-            <p className="text-center text-zinc-500 text-xs font-poppins mt-4 font-medium">
+            <p className="text-center hidden lg:block text-zinc-500 text-xs font-poppins mt-4 font-medium">
               Login to your account
             </p>
-            <div className="mt-8">
+            <div className="lg:mt-8">
               <label
                 htmlFor=""
                 className="block text-sm font-poppins text-slate-500 font-medium"
