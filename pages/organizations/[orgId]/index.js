@@ -1,12 +1,40 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 function DefaultOrganization() {
+  const [state, setstate] = useState(0);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.query.tab == "overview") {
+      setstate(0);
+    } else if (router.query.tab == "tasks") {
+      setstate(1);
+    } else if (router.query.tab == "requests") {
+      setstate(2);
+    } else if (router.query.tab == "members") {
+      setstate(3);
+    } else if (router.query.tab == "settings") {
+      setstate(4);
+    } else {
+      setstate(0);
+    }
+  }, [router]);
   return (
     <div className="fixed h-screen w-screen bg-red-50 flex">
       <div className="h-full min-w-[250px] w-fit shrink-0 bg-white border-r font-poppins tracking-wide">
         <ul className="p-4 space-y-2">
-          <li className="px-4 py-3 bg-slate-100 text-slate-700 rounded-md text-sm flex items-center space-x-3">
+          <li
+            onClick={() =>
+              router.push(`/organizations/wefef?tab=overview`, undefined, {
+                shallow: true,
+              })
+            }
+            className={`px-4 py-3 ${
+              state == 0 && " bg-slate-100"
+            } text-slate-700 rounded-md text-sm flex items-center space-x-3`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -17,7 +45,16 @@ function DefaultOrganization() {
             </svg>
             <span>Overview</span>
           </li>
-          <li className="px-4 py-3 bg-slate-100/0 text-slate-700 rounded-md text-sm flex items-center space-x-3">
+          <li
+            onClick={() =>
+              router.push(`/organizations/wefef?tab=tasks`, undefined, {
+                shallow: true,
+              })
+            }
+            className={`px-4 py-3 ${
+              state == 1 && " bg-slate-100"
+            } text-slate-700 rounded-md text-sm flex items-center space-x-3`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -33,7 +70,11 @@ function DefaultOrganization() {
 
             <span>Tasks</span>
           </li>
-          <li className="px-4 py-3 bg-slate-100/0 text-slate-700 rounded-md text-sm flex items-center space-x-3">
+          <li
+            className={`px-4 py-3 ${
+              state == 2 && " bg-slate-100"
+            } text-slate-700 rounded-md text-sm flex items-center space-x-3`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -50,7 +91,11 @@ function DefaultOrganization() {
 
             <span>Requests</span>
           </li>
-          <li className="px-4 py-3 bg-slate-100/0 text-slate-700 rounded-md text-sm flex items-center space-x-3">
+          <li
+            className={`px-4 py-3 ${
+              state == 3 && " bg-slate-100"
+            } text-slate-700 rounded-md text-sm flex items-center space-x-3`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -66,7 +111,11 @@ function DefaultOrganization() {
 
             <span>Members</span>
           </li>
-          <li className="px-4 py-3 bg-slate-100/0 text-slate-700 rounded-md text-sm flex items-center space-x-3">
+          <li
+            className={`px-4 py-3 ${
+              state == 4 && " bg-slate-100"
+            } text-slate-700 rounded-md text-sm flex items-center space-x-3`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -210,6 +259,11 @@ function DefaultOrganization() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mt-16">
+            <h1 className="font-medium text-slate-500 border-b pb-2">
+              Requests <span className="text-xs ml-4">(4 assigned to you)</span>
+            </h1>
           </div>
         </div>
       </div>
